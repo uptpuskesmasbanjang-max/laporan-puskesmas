@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+body {
+  background: #f5faf8;
+  color: #0f172a;
+}
+
+/* Fokus keyboard tetap terlihat jelas untuk aksesibilitas */
+:focus-visible {
+  outline: 2px solid #0f766e;
+  outline-offset: 2px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+}
+
+.btn-primary {
+  background: #0f766e;
+  color: white;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  transition: background 0.15s ease;
+}
+.btn-primary:hover { background: #115e59; }
+.btn-primary:disabled { background: #94a3b8; cursor: not-allowed; }
+
+.btn-secondary {
+  background: white;
+  color: #0f766e;
+  border: 1px solid #0f766e;
+  border-radius: 0.75rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+}
+.btn-secondary:hover { background: #f2f9f7; }
+
+.input-field {
+  border: 1px solid #cbd5e1;
+  border-radius: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  background: white;
+  font-size: 0.9rem;
+}
+.input-field:focus { border-color: #0f766e; }
