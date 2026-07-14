@@ -1,6 +1,4 @@
-// Script untuk membuat akun awal (super admin & contoh pemegang program).
-// Jalankan setelah schema.sql diterapkan: npm run seed
-require('dotenv').config({ path: '.env.local' });
+﻿require('dotenv').config({ path: '.env.local' });
 const { createClient } = require('@libsql/client');
 const bcrypt = require('bcryptjs');
 
@@ -19,6 +17,7 @@ async function main() {
 
   const imunisasi = await client.execute({
     sql: `SELECT id FROM programs WHERE nama = 'Imunisasi'`,
+    args: [],
   });
   if (imunisasi.rows[0]) {
     const pass = await bcrypt.hash('imunisasi123', 10);

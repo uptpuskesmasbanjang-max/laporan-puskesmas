@@ -18,7 +18,7 @@ export default function LoginTab({ onGotoKelolaProgram, onGotoKelolaPengguna }) 
     const res = await signIn('credentials', { username, password, redirect: false });
     setLoading(false);
     if (res?.error) {
-      setError('Username atau password salah');
+      setError(res.error);
     }
   }
 
